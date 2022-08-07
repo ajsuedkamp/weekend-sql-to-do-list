@@ -11,9 +11,9 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 
 Checklist
--[] create proper file sturcture: index.html, server folder, public folder, client js, css
--[]
--[]
+-[x] create proper file sturcture: index.html, server folder, public folder, client js, css
+-[x] create .gitignore file
+-[] source in the files correctly and test
 -[]
 -[]
 -[]
