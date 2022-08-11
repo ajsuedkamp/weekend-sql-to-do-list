@@ -13,9 +13,34 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 Checklist
 -[x] create proper file sturcture: index.html, server folder, public folder, client js, css
 -[x] create .gitignore file
--[] source in the files correctly and test
+-[x] source in the files correctly and test
+-[x] add task input field with a button to add task to To-Do list
 -[]
 -[]
 -[]
 -[]
--[]
+
+Lecture TODO
+- Server setup (localhost: 'port')
+- SQL for table (CREATE TABLE)
+- Insert sample data
+
+## read
+- GET route on server (router optional)
+- ready now function
+- Client side AJAX FOR GET
+- display data on the DOM
+
+
+## create 
+html for to collect data
+values from an input
+client side AJAX for POST 
+Post route on server
+INSERT INTO the database
+refresh on success
+
+### DELETE
+...
+
+#### PUT
