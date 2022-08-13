@@ -23,11 +23,12 @@ Checklist
 tasks that take 10-15 lines of code
 
 Lecture TODO
+# SERVER SETUP
 - [x] Server setup (localhost: 'port')
 - [x] SQL for table (CREATE TABLE)
 - [x] Insert sample data
 
-## read
+## READ
 - GET route on server (router optional)
 - ready now function
 - Client side AJAX FOR GET
