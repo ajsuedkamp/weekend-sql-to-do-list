@@ -20,6 +20,8 @@ Checklist
 -[]
 -[]
 
+tasks that take 10-15 lines of code
+
 Lecture TODO
 - Server setup (localhost: 'port')
 - SQL for table (CREATE TABLE)
