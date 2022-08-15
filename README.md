@@ -47,3 +47,9 @@ refresh on success
 ...
 
 #### PUT
+
+##### PG 
+- `npm install pg`
+- Created a database
+- Created a table in our new database
+- Use `pg` to return results from out database
