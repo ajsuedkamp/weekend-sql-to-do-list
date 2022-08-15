@@ -16,6 +16,9 @@ app.get('/tasks', (req, res) => {
     res.send(taskArray);
 });
 
+app.post('/tasks', (req, res) => {
+    const task = req.body;
+})
 
 app.listen(PORT, () => {
     console.log('listening on port', PORT);

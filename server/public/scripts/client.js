@@ -29,6 +29,13 @@ function getTasks() {
 } //End getTasks function
 
 function postTasks() {
-    
+    $.ajax({
+        type: 'POST',
+        url: '/tasks',
+        data: {
+            task: $('#task-description').val() ,
+            complete: 'N/A'
+        }
+    })
 }
 
