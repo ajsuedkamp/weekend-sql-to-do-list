@@ -5,23 +5,8 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static('server/public'));
 app.use(express.urlencoded({ extended: true }));
 
-let taskArray = [
-    {
-        task: 'sweep the floor',
-        complete: 'True'
-    }
-]
-
-app.get('/tasks', (req, res) => {
-    res.send(taskArray);
-});
-
-app.post('/tasks', (req, res) => {
-    const task = req.body;
-    // console.log(req.body);
-    taskArray.push(task);
-    res.sendStatus(201); // Send back success!
-})
+const tasksRouter = require('./routes/tasks.router.js');
+app.use('/tasks', tasksRouter);
 
 app.listen(PORT, () => {
     console.log('listening on port', PORT);
