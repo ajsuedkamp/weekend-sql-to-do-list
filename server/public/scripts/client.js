@@ -9,11 +9,13 @@ function readyNow() {
 }
 
 function getTasks() {
+    $('#task-description').val('');
     $.ajax({
         type: 'GET',
         url: '/tasks'
     }).then(function (response) {
         console.log(response)
+        $('#taskTableBody').empty();
         for(let item of response) {
             $('#taskTableBody').append(`
                  <tr>
@@ -36,6 +38,11 @@ function postTasks() {
             task: $('#task-description').val() ,
             complete: 'N/A'
         }
-    })
-}
+    }).then(function (response) {
+        getTasks();
+    }).catch(function (error) { // Reject / failure
+        console.log(error);
+        alert('Something went wrong!');
+    });
+} // End postTasks function
 

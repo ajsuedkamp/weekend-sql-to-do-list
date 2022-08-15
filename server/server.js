@@ -18,6 +18,9 @@ app.get('/tasks', (req, res) => {
 
 app.post('/tasks', (req, res) => {
     const task = req.body;
+    // console.log(req.body);
+    taskArray.push(task);
+    res.sendStatus(201); // Send back success!
 })
 
 app.listen(PORT, () => {
