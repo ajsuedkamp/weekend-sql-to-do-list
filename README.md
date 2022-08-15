@@ -29,7 +29,7 @@ Lecture TODO
 - [x] Insert sample data
 
 ## READ
-- GET route on server (router optional)
+- [] create a GET route on server (router optional)
 - ready now function
 - Client side AJAX FOR GET
 - display data on the DOM

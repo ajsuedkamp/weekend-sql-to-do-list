@@ -6,3 +6,6 @@ function readyNow() {
     console.log('JQ sourced');
 }
 
+function getTasks() {
+    
+}
