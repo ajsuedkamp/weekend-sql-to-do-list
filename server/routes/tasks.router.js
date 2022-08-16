@@ -43,5 +43,15 @@ router.post('/', (req, res) => {
     // res.sendStatus(201); // Send back success!
 });
 
+router.delete('/:id', (req, res) => {
+    const queryText = 'DELETE FROM "tasks" WHERE "id" = $1;';
+    pool.query(queryText, [req.params.id]).then((results) => {
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log(error);
+        res.sendStatus(500);
+    });
+});
+
 
 module.exports = router;
