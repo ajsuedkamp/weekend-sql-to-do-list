@@ -19,7 +19,7 @@ function getTasks() {
         for(let item of response) {
             $('#taskTableBody').append(`
                  <tr>
-                    <td>${item.task}</td>
+                    <td>${item.task_description}</td>
                     <td>${item.complete}</td>
                 </tr>
             `);
