@@ -14,12 +14,12 @@ function deleteTask() {
     const taskID = $(this).data('id');
     $.ajax({
         type: 'DELETE',
-        url: `/task/${taskID}`
+        url: `/tasks/${taskID}`
     }).then(function(response) {
         getTasks();
     }).catch(function(error) {
         alert('Something went wrong!');
-    })
+    });
 }
 function getTasks() {
     $('#task-description').val('');
@@ -29,14 +29,13 @@ function getTasks() {
     }).then(function (response) {
         console.log(response)
         $('#taskTableBody').empty();
-        for(let item of response) {
+        for(let task of response) {
             // We now have item.id
             $('#taskTableBody').append(`
                  <tr>
-                    <td>${item.task_description}</td>
+                    <td>${task.task_description}</td>
                     <td>
-                        <button class="task-complete" data-id="${item.id}">Complete</button>
-                        <button class="task-delete" data-id="${item.id}">Delete</button>
+                        <button class="task-delete" data-id="${task.id}">Delete</button>
                     </td>
                 </tr>
             `);
