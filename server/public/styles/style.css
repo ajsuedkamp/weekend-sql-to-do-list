@@ -2,6 +2,9 @@ h1 {
     color: blue;
 }
 
+tr {
+    background-color: red;
+}
 
 .complete {
     text-decoration: line-through;
