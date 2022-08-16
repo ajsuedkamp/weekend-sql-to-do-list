@@ -6,6 +6,7 @@ function readyNow() {
     console.log('JQ sourced');
     $('#add-task').on('click', postTasks);
     getTasks();
+    postTasks();
 }
 
 function getTasks() {
@@ -20,7 +21,6 @@ function getTasks() {
             $('#taskTableBody').append(`
                  <tr>
                     <td>${item.task_description}</td>
-                    <td>${item.complete}</td>
                 </tr>
             `);
         }
@@ -35,8 +35,7 @@ function postTasks() {
         type: 'POST',
         url: '/tasks',
         data: {
-            task: $('#task-description').val() ,
-            complete: 'N/A'
+            task_description: $('#task-description').val() ,
         }
     }).then(function (response) {
         getTasks();
