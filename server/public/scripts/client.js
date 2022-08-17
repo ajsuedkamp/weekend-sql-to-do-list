@@ -16,9 +16,9 @@ function completeTask() {
     $.ajax({
         type: 'PUT',
         url: `/tasks/${taskId}`
-    }).then(function(response) {
+    }).then(function (response) {
         getTasks();
-    }).catch(function(error) {
+    }).catch(function (error) {
         console.log(error);
         alert('Something went wrong!');
     });
@@ -29,9 +29,9 @@ function deleteTask() {
     $.ajax({
         type: 'DELETE',
         url: `/tasks/${taskId}`
-    }).then(function(response) {
+    }).then(function (response) {
         getTasks();
-    }).catch(function(error) {
+    }).catch(function (error) {
         alert('Something went wrong!');
     });
 }
@@ -43,10 +43,10 @@ function getTasks() {
     }).then(function (response) {
         console.log(response)
         $('#taskTableBody').empty();
-        for(let task of response) {
+        for (let task of response) {
             // We now have task.id
             let taskClass = '';
-            if(task.complete === true) {
+            if (task.complete === true) {
                 taskClass = 'complete';
             }
             $('#taskTableBody').append(`
@@ -73,7 +73,7 @@ function postTasks() {
         type: 'POST',
         url: '/tasks',
         data: {
-            task_description: $('#task-description').val() ,
+            task_description: $('#task-description').val(),
         }
     }).then(function (response) {
         getTasks();
